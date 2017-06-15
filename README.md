@@ -5,7 +5,7 @@ This is an example of setting up a Node.js app with Docker. The goal is to use t
 ## Development
 
 1. `cd app`
-1. `npm i`
+1. `yarn install`
 1. `cd ..`
 1. `docker-compose up`. 
 1. `curl localhost:3000` to see it up and running.

@@ -2,9 +2,9 @@
 set -e
 
 if [ "$NODE_ENV" = 'development' ]; then
-  exec npm run dev
+  exec yarn run dev
 elif [ "$NODE_ENV" = 'test' ]; then
-  exec npm run test
+  exec yarn run test
 else
-  exec npm start
+  exec yarn start
 fi
