@@ -1,0 +1,35 @@
+{
+  "name": "dockerize-express",
+  "version": "0.1.0",
+  "description": "example of express app dockerized",
+  "repository": "gtihub:rshurts/dockerized-express",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon --debug-brk server.js",
+    "test": "standard | snazzy && jest"
+  },
+  "engines": {
+    "node": ">=6.9.0"
+  },
+  "author": "Russell Shurts",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3",
+    "helmet": "^3.6.1",
+    "lodash": "^4.17.4",
+    "morgan": "^1.8.2"
+  },
+  "devDependencies": {
+    "jest": "^20.0.4",
+    "nodemon": "^1.11.0",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2",
+    "supertest": "^3.0.0"
+  },
+  "standard": {
+    "env": {
+      "jest": true
+    }
+  }
+}
