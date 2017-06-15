@@ -1,8 +1,8 @@
 {
-  "name": "dockerize-express",
+  "name": "dockerize-node",
   "version": "0.1.0",
   "description": "example of express app dockerized",
-  "repository": "gtihub:rshurts/dockerized-express",
+  "repository": "gtihub:rshurts/dockerized-node",
   "private": true,
   "scripts": {
     "start": "node server.js",
