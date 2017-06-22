@@ -19,11 +19,11 @@ In development mode, `localhost:5858` is exposed for remote Node.js debugging.
 
 ## Testing
 
-To quickly run the unit tests and linter, you can run `npm test` locally.
+To quickly run the unit tests and linter, you can run `yarn test` locally.
 
-Run `docker-compose -f docker-compose.test.yml up` to test things locally in the container or use this in a [Docker Cloud Autobuild](https://docs.docker.com/docker-cloud/builds/automated-build/).
+Run `docker-compose -f docker-compose.test.yml up` to test things locally in the container or use this in a [Docker Cloud Autobuild](https://docs.docker.com/docker-cloud/builds/automated-build/) or extend the compose file to include other services and run integration tests.
 
-Or in a CI environment, build the container and run the container passing in the `NODE_ENV=test` environment variable, before deploying your container somewhere or running end-to-end tests.
+Or, if the container can stand alone, build the container and run the container passing in the `NODE_ENV=test` environment variable, before deploying your container somewhere or running end-to-end tests.
 - `docker build -t dockerized-node .`
 - `docker run -e NODE_ENV=test dockerized-node`
 
