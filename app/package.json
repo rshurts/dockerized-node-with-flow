@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon --debug-brk server.js",
+    "dev": "nodemon --debug server.js",
     "test": "standard | snazzy && jest"
   },
   "engines": {
