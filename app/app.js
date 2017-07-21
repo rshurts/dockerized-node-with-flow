@@ -1,20 +1,20 @@
-const express = require('express')
-const helmet = require('helmet')
-const logger = require('morgan')
+const express = require("express");
+const helmet = require("helmet");
+const logger = require("morgan");
 
-const routes = require('./routes')
+const routes = require("./routes");
 
-const app = express()
+const app = express();
 
-app.use(helmet())
+app.use(helmet());
 
-const target = app.get('env')
-if (target === 'development') {
-  app.use(logger('dev'))
-} else if (target === 'production') {
-  app.use(logger('combined'))
+const target = app.get("env");
+if (target === "development") {
+  app.use(logger("dev"));
+} else if (target === "production") {
+  app.use(logger("combined"));
 }
 
-app.use('/', routes)
+app.use("/", routes);
 
-module.exports = app
+module.exports = app;
