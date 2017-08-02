@@ -5,9 +5,11 @@
   "repository": "github:rshurts/dockerized-node",
   "private": true,
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon $NODE_DEBUG_OPTION server.js",
-    "lint": "eslint --fix '**/*.js'",
+    "start": "node dist/server.js",
+    "build": "rm -rf dist && babel src -d dist --ignore *.test.js",
+    "dev": "nodemon $NODE_DEBUG_OPTION --exec babel-node -- src/server.js",
+    "lint": "eslint 'src/**/*.js'",
+    "pretty": "eslint --fix 'src/**/*.js'",
     "test": "jest"
   },
   "engines": {
@@ -17,12 +19,14 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.15.3",
-    "helmet": "^3.6.1",
+    "helmet": "^3.8.1",
     "morgan": "^1.8.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "eslint": "^4.3.0",
-    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-config-airbnb-base": "^11.3.1",
     "eslint-config-prettier": "^2.3.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-prettier": "^2.1.2",
