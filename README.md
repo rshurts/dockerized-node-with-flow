@@ -4,14 +4,16 @@ This is an example of setting up a Node.js app with Docker. The goal is to use t
 
 ## Development
 
-1. `cd app`
 1. `yarn install`
-1. `cd ..`
 1. `docker-compose up`. 
 1. `curl localhost:3000` to see it up and running.
 1. Change code.
 
-The `/app` directory is mounted into the container and `nodemon` is running. So any changes to the code or packages installed are auto-loaded and reflected in the container. The `docker-compose.yml` can be extended to link to other containers, if needed.
+The root directory is mounted into the container and `nodemon` is running. So any changes to the code or packages installed are auto-loaded and reflected in the container. The `docker-compose.yml` can be extended to link to other containers, if needed.
+
+Run `yarn run pretty` to automatically fix and format your code.
+
+Run `yarn run lint` to lint your code, `yarn run jest` to run the jest tests, and `yarn run flow` to for flow errors. Or run `yarn run test` to check for lint, type, or test errors.
 
 ### Debugging
 

@@ -11,8 +11,9 @@
     "dev": "nodemon $NODE_DEBUG_OPTION --exec babel-node -- src/server.js",
     "lint": "eslint 'src/**/*.js'",
     "pretty": "eslint --fix 'src/**/*.js'",
-    "flow": "flow",
-    "test": "jest"
+    "flow": "flow check",
+    "jest": "jest",
+    "test": "yarn run lint && yarn run flow && yarn run jest"
   },
   "engines": {
     "node": ">=6.9.0"
