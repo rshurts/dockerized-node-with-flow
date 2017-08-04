@@ -1,3 +1,5 @@
+// @flow
+
 const http = require("http");
 
 const app = require("./app");
@@ -11,7 +13,7 @@ function normalize(val) {
   if (bind >= 0) {
     return bind; // port number
   }
-  return false;
+  throw Error("Unable to determine port or pipe.");
 }
 
 const port = normalize(process.env.PORT || "3000");

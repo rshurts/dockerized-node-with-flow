@@ -3,8 +3,8 @@ FROM node:6.11.2-alpine
 RUN addgroup -S nodejs && adduser -S -G nodejs nodejs
 
 WORKDIR /app
-COPY app /app
-RUN yarn install && yarn run build
+COPY . /app
+RUN yarn install
 COPY cmd.sh /
 
 EXPOSE 3000

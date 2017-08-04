@@ -1,0 +1,32 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb-base",
+    "prettier",
+    "plugin:promise/recommended",
+    "plugin:jest/recommended",
+    "plugin:flowtype/recommended"
+  ],
+  "plugins": [
+    "import",
+    "prettier",
+    "promise",
+    "jest",
+    "flowtype"
+  ],
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "consistent-return": "off",
+    "no-console": "off",
+    "prettier/prettier": "error"
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  }
+}
