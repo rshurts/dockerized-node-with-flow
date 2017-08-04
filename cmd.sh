@@ -2,9 +2,9 @@
 set -e
 
 if [ "$NODE_ENV" = 'development' ]; then
-  exec yarn run dev
+  exec yarn dev
 elif [ "$NODE_ENV" = 'test' ]; then
-  exec yarn run test
+  exec yarn test
 else
   exec yarn start
 fi

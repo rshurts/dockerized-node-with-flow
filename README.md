@@ -15,19 +15,17 @@ The root directory is mounted into the container and `nodemon` is running. So an
 
 ### Commands
 
-- `yarn run pretty` to format your code.
-- `yarn run lint` to lint your code.
-- `yarn run jest` to perform the jest tests.
-- `yarn run flow` to check for type errors. 
-- `yarn run test` to check for lint, type, and test errors.
+- `yarn pretty` to format your code.
+- `yarn lint` to lint your code.
+- `yarn jest` to perform the jest tests.
+- `yarn flow` to check for type errors. 
+- `yarn test` to check for lint, type, and test errors.
 
 ### Debugging
 
 In development mode, `localhost:5858` is exposed for remote Node.js debugging.
 
 ## Testing
-
-To quickly run the unit tests and linter, you can run `yarn test` locally.
 
 Run `docker-compose -f docker-compose.test.yml up` to test things locally in the container or use this in a [Docker Cloud Autobuild](https://docs.docker.com/docker-cloud/builds/automated-build/) or extend the compose file to include other services and run integration tests.
 
