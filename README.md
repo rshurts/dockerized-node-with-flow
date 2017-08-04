@@ -37,4 +37,4 @@ Or, if the container can stand alone, build the container and run the container 
 
 ## Production
 
-The included `Dockerfile` to meant to be production friendly. The `NODE_ENV` environment variable is set to `production` in case the application or something else is reliant on it. And the user is changed so it isn't root. The container is also built on Alpine Linux to keep the size small.
+The included `Dockerfile` to meant to be production friendly. The `NODE_ENV` environment variable is set to `production`, the user has been changed from root, and the container is built on Alpine Linux to keep the size small.
