@@ -5,9 +5,9 @@
   "repository": "github:rshurts/dockerized-node",
   "private": true,
   "scripts": {
-    "prestart": "yarn build",
     "start": "node dist/server.js",
-    "build": "rm -rf dist && babel src -d dist --ignore *.test.js",
+    "prebuild": "rm -rf dist",
+    "build": "babel src -d dist --ignore *.test.js",
     "dev": "nodemon $NODE_DEBUG_OPTION --exec babel-node -- src/server.js",
     "lint": "eslint 'src/**/*.js'",
     "pretty": "eslint --fix 'src/**/*.js'",

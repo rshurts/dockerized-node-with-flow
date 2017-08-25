@@ -1,5 +1,7 @@
-app/node_modules/
-app/coverage/
-app/dist/
-app/*.log
+node_modules/
+coverage/
+dist/
 *.log
+
+.git
+.idea
