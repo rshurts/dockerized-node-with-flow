@@ -1,6 +1,6 @@
-FROM node:6.11.2-alpine
+FROM node:6.11.2
 
-RUN addgroup -S nodejs && adduser -S -G nodejs nodejs
+RUN mkdir -p /home/nodejs && groupadd -r nodejs && useradd -r -g nodejs nodejs
 
 WORKDIR /app
 COPY . /app
@@ -9,8 +9,10 @@ COPY cmd.sh /
 
 EXPOSE 3000
 
+ENV HOME /home/nodejs
 ENV NODE_ENV production
 
+RUN chown -R nodejs:nodejs $HOME
 USER nodejs
 
 CMD ["/cmd.sh"]
