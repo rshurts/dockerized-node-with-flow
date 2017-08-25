@@ -13,7 +13,7 @@
     "pretty": "eslint --fix 'src/**/*.js'",
     "flow": "flow check",
     "jest": "jest",
-    "test": "yarn lint && yarn flow && yarn jest"
+    "test": "yarn lint && yarn jest"
   },
   "engines": {
     "node": ">=6.9.0"
