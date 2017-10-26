@@ -1,4 +1,4 @@
-FROM node:6.11.2
+FROM node:6.11.5
 
 # Setup applicaton, install dependencies, and build.
 WORKDIR /app
