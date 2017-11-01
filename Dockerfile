@@ -2,8 +2,9 @@ FROM node:6.11.5
 
 # Setup applicaton, install dependencies, and build.
 WORKDIR /app
-COPY . /app
+COPY package.json /app
 RUN yarn install
+COPY . /app
 RUN yarn build
 COPY cmd.sh /
 
