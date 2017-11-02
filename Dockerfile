@@ -1,4 +1,4 @@
-FROM node:6.11.5
+FROM node:8.9.0
 
 # Setup applicaton, install dependencies, and build.
 WORKDIR /app
@@ -15,7 +15,7 @@ ENV HOME /home/nodejs
 
 RUN groupadd -r nodejs \
 && useradd -r -g nodejs nodejs \
-&& mkdir -p /home/nodejs \
+&& mkdir -p $HOME \
 && chown nodejs:nodejs $HOME
 
 USER nodejs
