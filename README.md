@@ -21,10 +21,6 @@ The root directory is mounted into the container and `nodemon` is running. So an
 - `yarn flow` to check for type errors. 
 - `yarn test` to check for lint, type, and test errors.
 
-### Debugging
-
-In development mode, `localhost:5858` is exposed for remote Node.js debugging.
-
 ## Testing
 
 Run `docker-compose -f docker-compose.test.yml up` to test things locally in the container or use this in a [Docker Cloud Autobuild](https://docs.docker.com/docker-cloud/builds/automated-build/) or extend the compose file to include other services and run integration tests.
