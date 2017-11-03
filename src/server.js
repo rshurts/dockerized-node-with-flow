@@ -7,7 +7,7 @@ const app = require("./app");
 // Normalize a port into a number, string, or false.
 function normalize(val) {
   const bind = parseInt(val, 10);
-  if (isNaN(bind)) {
+  if (Number.isNaN(bind)) {
     return val; // named pipe
   }
   if (bind >= 0) {
