@@ -1,8 +1,8 @@
 {
-  "name": "dockerize-node",
+  "name": "dockerized-node-with-flow",
   "version": "0.1.0",
   "description": "example of express app dockerized",
-  "repository": "github:rshurts/dockerized-node",
+  "repository": "github:rshurts/dockerized-node-with-flow",
   "private": true,
   "scripts": {
     "start": "node dist/server.js",
